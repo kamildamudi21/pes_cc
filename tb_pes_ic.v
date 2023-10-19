@@ -29,6 +29,10 @@ module tb_pes_ic;
     integer j;
 
     initial begin
+        
+	    $dumpfile("tb_pes_ic.vcd");
+    	$dumpvars(0, tb_pes_ic);  
+        
         // Reset the system.
         clk_in          =   1'b0;
         rst_in          =   1'b1;
