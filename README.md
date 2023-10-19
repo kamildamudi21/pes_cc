@@ -4,9 +4,9 @@ This repository is your guide to successfully completing RTL (Register-Transfer 
 
 # Interrupt Controller
 
-The primary purpose of an interrupt controller is to handle interrupt requests and determine which interrupt to service next based on their priority levels.
+It is a hardware component responsible for managing and prioritizing interrupt requests in a digital system. The interrupt controller interacts with a processor and peripheral devices to handle interrupt-driven events in a systematic manner.
 
-
+The code defines an interrupt controller module with a finite state machine that manages interrupt requests, prioritizes them, communicates with the processor, and sends interrupt-related information on a bidirectional bus. The controller can operate in either polling mode or priority mode based on external commands. It's a fundamental component for handling interrupts in digital systems.
 
 ## RTL Simulation
 
