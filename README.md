@@ -38,7 +38,7 @@ RTL synthesis performs timing analysis to ensure that the design meets its requi
 
 # Conclusion
 
-With the Rtl And Gds Output we can confirm that they both match.
+With the Rtl And Gls Output we can confirm that they both match.
 Hence No Gls Mismatch.
 
 
