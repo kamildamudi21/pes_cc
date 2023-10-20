@@ -25,10 +25,17 @@ RTL synthesis performs timing analysis to ensure that the design meets its requi
 ## GLS Synthesis
 
  This stage follows RTL synthesis and involves converting the logical description of the design into a physical layout that can be manufactured.
+  ```
+  iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v pes_ic_net.v tb_pes_ic.v
+  ./a.out
+  gtkwave tb_pes_ic.vcd
+
+  ```
+
 ![3gdsterminal](https://github.com/kamildamudi21/pes_ic/assets/141449459/748c49a4-7f28-4762-aa45-fe84c42ad38f)
+
 ![4gds](https://github.com/kamildamudi21/pes_ic/assets/141449459/ec888779-40e7-487e-8544-021927dec42e)
 
-![5gls](https://github.com/kamildamudi21/pes_ic/assets/141449459/3cfd00e4-964a-484c-97c5-d4068e32703d)
 
 
 
