@@ -7,7 +7,10 @@ This repository is your guide to successfully completing RTL (Register-Transfer 
 It is a hardware component responsible for managing and prioritizing interrupt requests in a digital system. The interrupt controller interacts with a processor and peripheral devices to handle interrupt-driven events in a systematic manner.
 
 The code defines an interrupt controller module with a finite state machine that manages interrupt requests, prioritizes them, communicates with the processor, and sends interrupt-related information on a bidirectional bus. The controller can operate in either polling mode or priority mode based on external commands. It's a fundamental component for handling interrupts in digital systems.
-
+<details>
+  <summary>RTL And GLS </summary>
+  <br>
+ 
 ## RTL Simulation
 
 It is an essential step in the process of designing and verifying digital hardware components, such as microprocessors, ASICs (Application-Specific Integrated Circuits), and FPGAs (Field-Programmable Gate Arrays).
@@ -40,9 +43,15 @@ RTL synthesis performs timing analysis to ensure that the design meets its requi
 
 With the Rtl And Gls Output we can confirm that they both match.
 Hence No Gls Mismatch.
+</details>
 
 
+<details>
+  <summary>PD </summary>
+  <br>
 
+
+</details>
 
 
 
