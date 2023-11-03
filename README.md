@@ -145,14 +145,16 @@ magic -T /home/kamild/OpenLane/pdk/sky130A/libs.tech/magic/sky130A.tech lef read
 
 ## Cts stage:
 
-The CTS (Clock Tree Synthesis) stage is responsible for creating a clock distribution network that ensures reliable and synchronized clock signals reach all the sequential elements (like flip-flops) in the chip. This stage involves the following key steps:
 
-- Buffer Insertion: The CTS process inserts buffers into the clock network to balance and distribute the clock signal evenly. Buffers help in reducing clock skew, ensuring that all parts of the chip receive clock signals simultaneously.
 
-- Clock Tree Construction: The clock tree is constructed by connecting the buffers in a hierarchical fashion from the global clock source (e.g., a PLL or external input) to the leaf-level cells throughout the chip.
+The Clock Tree Synthesis (CTS) phase's primary objective is to establish a clock distribution network guaranteeing dependable and synchronized clock signals for all the sequential components, such as flip-flops, within the chip. This phase encompasses the subsequent pivotal procedures:
 
-- Skew Minimization: The CTS stage aims to minimize clock skew, which is the variation in arrival times of the clock signal at different points in the design. Minimizing skew ensures that all registers see the same clock edge simultaneously, which is crucial for proper circuit operation.
+- Buffer Insertion: In the CTS procedure, buffers are incorporated into the clock network to achieve uniform distribution of the clock signal. These buffers play a crucial role in mitigating clock skew, thereby ensuring simultaneous delivery of clock signals to all sections of the chip.
 
+- Clock Tree Construction: The clock tree is built by linking the buffers in a hierarchical manner, extending from the global clock source (such as a PLL or external input) to the individual leaf-level cells across the entire chip.
+
+- Skew Minimization: Within the CTS phase, the objective is to reduce clock skew, which represents the disparity in clock signal arrival times at various locations in the design. By minimizing skew, the aim is to guarantee that all registers observe the same clock edge concurrently, a critical requirement for the effective operation of the circuit.
+- 
 - Power Optimization: CTS also involves power optimization techniques to reduce dynamic and static power consumption in the clock distribution network.
 
 - Constraints and Timing: It takes into consideration the design constraints related to clock paths, such as clock-to-q requirements, setup and hold times, and other timing considerations.
@@ -160,16 +162,37 @@ The CTS (Clock Tree Synthesis) stage is responsible for creating a clock distrib
 - Clock Gating: Clock gating cells may be inserted in the clock tree to save power when certain parts of the chip are not in use, and the clock can be temporarily disabled.
 
 
+![11](https://github.com/kamildamudi21/pes_ic/assets/141449459/16de0272-59ac-408f-aa2a-94e6dfc9e457)
+<br>
+- report
+  
+![12a](https://github.com/kamildamudi21/pes_ic/assets/141449459/04e79663-59e1-486d-ad8b-94fa42dd0f5c)
+![12b](https://github.com/kamildamudi21/pes_ic/assets/141449459/3b5118cb-f0c1-4690-9832-557b0b31fc8c)
+![12c](https://github.com/kamildamudi21/pes_ic/assets/141449459/a1ee902f-0b99-40cf-9c48-6314665925df)
+![12d](https://github.com/kamildamudi21/pes_ic/assets/141449459/c6ff5974-d64d-4d87-bdbf-6a9b3d2954d7)
+
+
 ## Routing stage:
 
 - The routing stage is responsible for creating the physical wire connections between the placed cells on the chip layout. This involves determining the paths for signal wires, power distribution, and clock signals, while adhering to design rules, avoiding congestion, and optimizing for various factors such as wirelength, signal delay, and power consumption.
 
-  
+![13](https://github.com/kamildamudi21/pes_ic/assets/141449459/3e2bb2e4-75c1-46f8-9ea5-ae8d01078036)
+
 
 ```
 magic -T /home/kamild/OpenLane/pdk/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_dff_async.def &
 ```
 
+![14(routing)](https://github.com/kamildamudi21/pes_ic/assets/141449459/0a7f19e7-3974-4618-bdc3-bb9b13a1bca7)
+
+- router zoomed.
+  
+![14(routing_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/b10342b5-5a0e-4bc7-a5c2-cefda382f34b)
+
+
+- Power report
+
+![15a](https://github.com/kamildamudi21/pes_ic/assets/141449459/d0236f06-2eb1-4113-b111-0ae4c2eca86c)
 
 </details>
 
