@@ -194,6 +194,14 @@ magic -T /home/kamild/OpenLane/pdk/sky130A/libs.tech/magic/sky130A.tech lef read
 
 ![15a](https://github.com/kamildamudi21/pes_ic/assets/141449459/d0236f06-2eb1-4113-b111-0ae4c2eca86c)
 
+
+# Summary
+- Chip Area = 3831.1744
+- Internal Power = 1.56 mW
+- Switching Power = 3.89 mW
+- Leakage Power = 2.94 nW
+- Total Power = 5.44 mW
+
 </details>
 
 
