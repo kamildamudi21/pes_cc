@@ -10,6 +10,8 @@ The code defines an interrupt controller module with a finite state machine that
 <details>
   <summary>RTL And GLS </summary>
   <br>
+
+
  
 ## RTL Simulation
 
@@ -49,6 +51,31 @@ Hence No Gls Mismatch.
 <details>
   <summary>PD </summary>
   <br>
+
+![1](https://github.com/kamildamudi21/pes_ic/assets/141449459/a08c1a8c-4c25-4c2b-b2ab-8bef5e492004)
+![2](https://github.com/kamildamudi21/pes_ic/assets/141449459/3e808b8a-0115-49a7-9fcb-ec7f54009841)
+![3](https://github.com/kamildamudi21/pes_ic/assets/141449459/9c352c46-1396-401f-ac8f-309e4024ccf2)
+![4](https://github.com/kamildamudi21/pes_ic/assets/141449459/0fcea0d9-6784-4f5b-83fa-d25943d93d25)
+![5](https://github.com/kamildamudi21/pes_ic/assets/141449459/3f388611-9931-4453-abc1-2b24e5246f46)
+![6a](https://github.com/kamildamudi21/pes_ic/assets/141449459/2503d12c-c7a8-40df-bbcd-7ba9f9dac49b)
+![6b](https://github.com/kamildamudi21/pes_ic/assets/141449459/993d75b6-f920-483d-b280-7328c36a4a5c)
+![7](https://github.com/kamildamudi21/pes_ic/assets/141449459/f2c71d88-7e6a-44a6-aedd-9f3e4a338fcb)
+![8(floorplan)](https://github.com/kamildamudi21/pes_ic/assets/141449459/4d198a02-9162-4070-b228-2be102cd4343)
+![8(floorplan_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/c000f336-09d7-4282-ad06-07731ccbd6c1)
+![9](https://github.com/kamildamudi21/pes_ic/assets/141449459/25fda90e-1ba0-421c-aeb8-9e4f7329820e)
+![10(place)](https://github.com/kamildamudi21/pes_ic/assets/141449459/8004b617-e885-4a08-b28a-699d1c9bb119)
+![10(place_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/4890e830-d93f-4c0e-b030-a9d30df23ca6)
+![11](https://github.com/kamildamudi21/pes_ic/assets/141449459/f0c41d11-9204-4fdf-8502-2ef806c806de)
+![12a](https://github.com/kamildamudi21/pes_ic/assets/141449459/435fcfdf-9791-4b3f-904d-1cb70547d0a7)
+![12b](https://github.com/kamildamudi21/pes_ic/assets/141449459/10ebe4c9-0830-433e-87c0-168b8ba7b000)
+![12c](https://github.com/kamildamudi21/pes_ic/assets/141449459/4c178cfb-1ce3-45de-a3bb-7315a0a64532)
+![12d](https://github.com/kamildamudi21/pes_ic/assets/141449459/30e78019-0b60-49ef-ad78-884313ba5723)
+![13](https://github.com/kamildamudi21/pes_ic/assets/141449459/91290516-6bde-43ed-a303-961a4c1be673)
+![14(routing)](https://github.com/kamildamudi21/pes_ic/assets/141449459/b341ff3e-29e9-4d28-9138-8ed83a150892)
+![14(routing_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/9e3259a6-88e2-4710-a9c2-e77ec57749c7)
+![15a](https://github.com/kamildamudi21/pes_ic/assets/141449459/613dbebc-4db8-47a5-8bf2-bc6225ab6d3f)
+
+
 
 
 </details>
