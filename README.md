@@ -159,6 +159,7 @@ The CTS (Clock Tree Synthesis) stage is responsible for creating a clock distrib
 
 - Clock Gating: Clock gating cells may be inserted in the clock tree to save power when certain parts of the chip are not in use, and the clock can be temporarily disabled.
 
+
 ## Routing stage:
 
 - The routing stage is responsible for creating the physical wire connections between the placed cells on the chip layout. This involves determining the paths for signal wires, power distribution, and clock signals, while adhering to design rules, avoiding congestion, and optimizing for various factors such as wirelength, signal delay, and power consumption.
