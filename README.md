@@ -52,29 +52,112 @@ Hence No Gls Mismatch.
   <summary>PD </summary>
   <br>
 
+- First create a folder in you Openlane/design directory and save your design there.
 ![1](https://github.com/kamildamudi21/pes_ic/assets/141449459/a08c1a8c-4c25-4c2b-b2ab-8bef5e492004)
-![2](https://github.com/kamildamudi21/pes_ic/assets/141449459/3e808b8a-0115-49a7-9fcb-ec7f54009841)
-![3](https://github.com/kamildamudi21/pes_ic/assets/141449459/9c352c46-1396-401f-ac8f-309e4024ccf2)
-![4](https://github.com/kamildamudi21/pes_ic/assets/141449459/0fcea0d9-6784-4f5b-83fa-d25943d93d25)
-![5](https://github.com/kamildamudi21/pes_ic/assets/141449459/3f388611-9931-4453-abc1-2b24e5246f46)
-![6a](https://github.com/kamildamudi21/pes_ic/assets/141449459/2503d12c-c7a8-40df-bbcd-7ba9f9dac49b)
-![6b](https://github.com/kamildamudi21/pes_ic/assets/141449459/993d75b6-f920-483d-b280-7328c36a4a5c)
-![7](https://github.com/kamildamudi21/pes_ic/assets/141449459/f2c71d88-7e6a-44a6-aedd-9f3e4a338fcb)
-![8(floorplan)](https://github.com/kamildamudi21/pes_ic/assets/141449459/4d198a02-9162-4070-b228-2be102cd4343)
-![8(floorplan_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/c000f336-09d7-4282-ad06-07731ccbd6c1)
-![9](https://github.com/kamildamudi21/pes_ic/assets/141449459/25fda90e-1ba0-421c-aeb8-9e4f7329820e)
-![10(place)](https://github.com/kamildamudi21/pes_ic/assets/141449459/8004b617-e885-4a08-b28a-699d1c9bb119)
-![10(place_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/4890e830-d93f-4c0e-b030-a9d30df23ca6)
-![11](https://github.com/kamildamudi21/pes_ic/assets/141449459/f0c41d11-9204-4fdf-8502-2ef806c806de)
-![12a](https://github.com/kamildamudi21/pes_ic/assets/141449459/435fcfdf-9791-4b3f-904d-1cb70547d0a7)
-![12b](https://github.com/kamildamudi21/pes_ic/assets/141449459/10ebe4c9-0830-433e-87c0-168b8ba7b000)
-![12c](https://github.com/kamildamudi21/pes_ic/assets/141449459/4c178cfb-1ce3-45de-a3bb-7315a0a64532)
-![12d](https://github.com/kamildamudi21/pes_ic/assets/141449459/30e78019-0b60-49ef-ad78-884313ba5723)
-![13](https://github.com/kamildamudi21/pes_ic/assets/141449459/91290516-6bde-43ed-a303-961a4c1be673)
-![14(routing)](https://github.com/kamildamudi21/pes_ic/assets/141449459/b341ff3e-29e9-4d28-9138-8ed83a150892)
-![14(routing_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/9e3259a6-88e2-4710-a9c2-e77ec57749c7)
-![15a](https://github.com/kamildamudi21/pes_ic/assets/141449459/613dbebc-4db8-47a5-8bf2-bc6225ab6d3f)
 
+- Then create a folder named 'src' and save the main verilog code in that folder too and also save it outside the folder as well , with the verilog code also save the
+```
+sky130_fd_sc_hd__fast.lib
+sky130_fd_sc_hd__slow.lib
+sky130_fd_sc_hd__typical.lib
+```
+- create a config.json file outside your src folder.
+- all the files are present at the top
+
+![3](https://github.com/kamildamudi21/pes_ic/assets/141449459/57cc6bd6-85ca-4f1a-8b4a-16a7d67a681e)
+
+### Interactive OpenLane flow
+Open terminal in home directory and then type the following:
+
+
+
+cd OpenLane/ 
+sudo make mount 
+```
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design pes_ic
+```
+
+![4](https://github.com/kamildamudi21/pes_ic/assets/141449459/fa2a3310-37a3-429f-93af-6d75f6520641)
+
+
+```
+run_synthesis
+run_floorplan
+run_placement
+run_cts
+run_routing
+run_magic
+run_magic_spice_export
+run_magic_drc
+run_netgen
+run_magic_antenna_check
+```
+
+
+## Synthesis stage:
+Synthesis is a fundamental stage in the digital design flow. It takes an abstract hardware description and generates a netlist consisting of logical gates and flip-flops that represent the desired functionality of the design.
+
+![5](https://github.com/kamildamudi21/pes_ic/assets/141449459/b6df0ab6-cff5-4ad7-9634-253398a653e9)
+
+
+
+- Area report
+
+![6a](https://github.com/kamildamudi21/pes_ic/assets/141449459/d1391d9a-280a-442f-bd7b-519244a410a8)
+![6b](https://github.com/kamildamudi21/pes_ic/assets/141449459/6ea396a0-d4f5-49cd-b451-45a9c0c5e2e4)
+
+
+## Floorplan stage:
+
+The floorplan stage in digital integrated circuit design involves creating a high-level layout for the chip, defining the core area, the locations of I/O pads, and other critical structures. It establishes the overall physical framework for the chip design and serves as a foundation for subsequent stages such as placement and routing. During the floorplan stage, designers make decisions about the chip's dimensions, aspect ratio, power grid, and other essential aspects to meet the project's requirements. The goal is to efficiently allocate space for various components while adhering to design constraints, ultimately ensuring that the chip will meet its performance, power, and area goals.
+
+![7](https://github.com/kamildamudi21/pes_ic/assets/141449459/bcca33ec-95d4-4646-a54f-2011720fa6f3)
+
+
+```
+magic -T /home/kamild/OpenLane/pdk/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_ic.def &
+```
+
+![8(floorplan)](https://github.com/kamildamudi21/pes_ic/assets/141449459/572d45a8-a5ba-431c-92b4-bfdba5f4af11)
+
+- Floorplan Zoomed.
+  
+![8(floorplan_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/595d835a-74a3-43b9-9c18-4b9f58506f6c)
+
+## Placement stage:
+
+The placement stage in digital integrated circuit design involves determining the physical positions of synthesized logic cells on the chip's layout. This critical step aims to optimize the arrangement of cells to minimize wirelength, meet design constraints, and achieve desired performance. Placement typically involves global placement, which provides a rough layout, followed by legalization to ensure cells conform to design rules and spacing requirements. The outcome of this stage is a physical placement file that specifies the coordinates of each cell, serving as the basis for subsequent routing and design verification steps. Efficient placement is essential for optimizing area, power, and signal timing in the final chip design.
+
+![9](https://github.com/kamildamudi21/pes_ic/assets/141449459/88e7c5f3-b6ac-4146-b92e-2aca83b4a454)
+
+```
+magic -T /home/kamild/OpenLane/pdk/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_dff_async.def &
+```
+
+![10(place)](https://github.com/kamildamudi21/pes_ic/assets/141449459/be2e9d6a-9b16-4855-915a-93546a75497f)
+
+- Placement Zoomed.
+
+![10(place_zoom)](https://github.com/kamildamudi21/pes_ic/assets/141449459/2b6365a2-09c2-43db-b4e1-baddf261543e)
+
+
+## Cts stage:
+
+The CTS (Clock Tree Synthesis) stage is responsible for creating a clock distribution network that ensures reliable and synchronized clock signals reach all the sequential elements (like flip-flops) in the chip. This stage involves the following key steps:
+
+- Buffer Insertion: The CTS process inserts buffers into the clock network to balance and distribute the clock signal evenly. Buffers help in reducing clock skew, ensuring that all parts of the chip receive clock signals simultaneously.
+
+- Clock Tree Construction: The clock tree is constructed by connecting the buffers in a hierarchical fashion from the global clock source (e.g., a PLL or external input) to the leaf-level cells throughout the chip.
+
+- Skew Minimization: The CTS stage aims to minimize clock skew, which is the variation in arrival times of the clock signal at different points in the design. Minimizing skew ensures that all registers see the same clock edge simultaneously, which is crucial for proper circuit operation.
+
+- Power Optimization: CTS also involves power optimization techniques to reduce dynamic and static power consumption in the clock distribution network.
+
+- Constraints and Timing: It takes into consideration the design constraints related to clock paths, such as clock-to-q requirements, setup and hold times, and other timing considerations.
+
+- Clock Gating: Clock gating cells may be inserted in the clock tree to save power when certain parts of the chip are not in use, and the clock can be temporarily disabled.
 
 
 
